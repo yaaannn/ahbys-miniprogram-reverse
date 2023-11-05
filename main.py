@@ -28,7 +28,7 @@ class ahbys:
         return str(cipher_text, encoding="utf-8")
 
     def login(self):
-        url_login = "https://yun.ahbys.com/MiniAPI/10360/Graduate/login.ashx"
+        url_login = f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/login.ashx"
 
         params = {
             "rand": random.random(),
@@ -45,7 +45,7 @@ class ahbys:
 
     def get_base_info(self):
         url_base_info = (
-            "https://yun.ahbys.com/MiniAPI/10360/Graduate/Dispatch/BaseInfo.ashx"
+            f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/Dispatch/BaseInfo.ashx"
         )
 
         params = {
@@ -59,7 +59,7 @@ class ahbys:
 
     def get_link_info(self):
         url_link_info = (
-            "https://yun.ahbys.com/MiniAPI/10360/Graduate/Dispatch/LinkInfo.ashx"
+            f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/Dispatch/LinkInfo.ashx"
         )
 
         params = {
@@ -73,9 +73,7 @@ class ahbys:
         return res.json()
 
     def get_employer_info(self):
-        url_employer_info = (
-            "https://yun.ahbys.com/MiniAPI/10360/Graduate/Dispatch/EmployerInfo.ashx"
-        )
+        url_employer_info = f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/Dispatch/EmployerInfo.ashx"
 
         params = {
             "rand": random.random(),
@@ -88,9 +86,7 @@ class ahbys:
         return res.json()
 
     def get_archive_info(self):
-        url_archive_info = (
-            "https://yun.ahbys.com/MiniAPI/10360/Graduate/Dispatch/ArchiveInfo.ashx"
-        )
+        url_archive_info = f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/Dispatch/ArchiveInfo.ashx"
 
         params = {
             "rand": random.random(),
@@ -104,7 +100,7 @@ class ahbys:
 
     def get_chsi_api(self, year, ksh):
         url_chsi_api = (
-            "https://yun.ahbys.com/MiniAPI/10360/Graduate/Dispatch/ChsiApi.ashx"
+            f"https://yun.ahbys.com/MiniAPI/{self.code}/Graduate/Dispatch/ChsiApi.ashx"
         )
 
         params = {
